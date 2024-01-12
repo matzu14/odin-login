@@ -156,7 +156,7 @@ table {
   width: 25vw;
   background-position: center;
   background-size: cover;
-  background-image: url("/src/images/photo-1585202900225-6d3ac20a6962.avif");
+  background-image: url("src/images/photo-1585202900225-6d3ac20a6962.avif");
 }
 
 .login-section {
