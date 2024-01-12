@@ -1,0 +1,326 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+:root{
+  --background-color: #f9fafb;
+  --small-text: 1.2rem;
+  --text-size: 1.6rem;
+  --big-text: 8rem;
+  --title-text: 2rem;
+  --primary-color: #1976d2;
+  --secondary-color: #596d48;
+  --secondary-color-lighter: #a5b995;
+  --error-color: #f44336;
+  --hypertext-color: #d3d3d3;
+}
+
+@font-face {
+  font-family: norse;
+  src: url(src/fonts/Norse-Bold.otf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+html,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.odin-section {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/src/images/photo-1585202900225-6d3ac20a6962.avif");
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  background-color: var(--background-color);
+
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  max-height: fit-content;
+}
+
+.odin-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 100px;
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 200px;
+  background-color: #000000aa;
+}
+.odin-text > p {
+  font-family: norse;
+  color: #fff;
+  font-size: var(--big-text);
+}
+
+.odin-text > img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.odin-section > p {
+  color: var(--hypertext-color);
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+
+.odin-section > p > a,
+.odin-section > p > a:visited,
+.odin-section > p > a:link,
+.odin-section > p > a:hover,
+.odin-section > p > a:focus,
+.odin-section > p > a:active {
+  color: var(--hypertext-color);
+}
+
+.margin-y-50px {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.header-text {
+  font-weight: bold;
+  font-size: var(--title-text);
+}
+
+.header-text > i {
+  font-style: italic;
+}
+
+.form-div {
+  padding: 2% 20% 2% 5%;
+  background-color: #fff;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+legend {
+  font-size: var(--title-text);
+  font-weight: bold;
+}
+
+.inputs-div {
+  display: grid;
+  height: fit-content;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(20px, auto);
+}
+.inputs-div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+div > label {
+  font-size: var(--text-size);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+div > input {
+  border-radius: 5px;
+  border: 1px #e5e7eb solid;
+  padding: 5px;
+  max-width: 60%;
+}
+
+div > input:active,
+input:focus,
+input:focus-visible {
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.25);
+  outline: none;
+  border: none;
+  border: 1px var(--primary-color) solid;
+}
+
+div > input:invalid {
+  border: 1px var(--error-color) solid;
+}
+
+
+.after-form {
+  margin-top: 20px;
+  width: 300px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.after-form > button {
+  text-transform: capitalize;
+  background-color: var(--secondary-color);
+  font-size: var(--title-text);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 15px 30px;
+  margin-top: 20px;
+}
+
+.after-form > button:hover {
+  cursor: pointer;
+}
+
+.after-form > button:focus {     
+  background-color: var(--secondary-color-lighter);  
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.30) inset;  
+}
+
+.five-percent-left-margin {
+  margin-left: 5%;
+}
+p {
+  font-size: var(--small-text);
+}
+.after-form > p {
+  font-weight: bold;
+}
+
+.after-form > p > a,
+.after-form > p > a:visited,
+.after-form > p > a:link,
+.after-form > p > a:hover,
+.after-form > p > a:focus,
+.after-form > p > a:active {
+  color: #596d48;
+}
